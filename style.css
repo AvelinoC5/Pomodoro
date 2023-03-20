@@ -1,0 +1,96 @@
+body {
+    font-family: "Courier New", monospace;
+    background-image: url("images/dark.png");
+}
+
+#app {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px #ccc;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+#time {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#time #value {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"] {
+    font-family: "Courier New", monospace;
+    padding: 10px;
+    border: solid 1px #ccc;
+    width: 300px;
+}
+
+button,
+input[type="submit"] {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+   }
+   
+   button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+   }
+   
+   @keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #05bada66;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+   }
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.task {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.task .completed {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.done {
+    display: inline-block;
+    padding: 5px;
+    background-color: #ccc;
+}
